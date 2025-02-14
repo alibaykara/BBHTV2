@@ -70,9 +70,7 @@ Happy hacking!" :smiley:
 - urlhunter
 - virtual-host-discovery
 - Waybackurls
-- waybackmachine
 - webscreenshot
-- Whois
 - WPScanAPI
 - wpscan
 - wpcli
