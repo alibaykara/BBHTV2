@@ -4,7 +4,7 @@
 </p>
 
 "Hello, there used to be a Bash script developed by NahamSec for bug bounty hunters. This script was released 6 years ago but unfortunately hasn't been updated. I created a similar setup script, here’s the new BBHTV2. My goal is to quickly set up tools; to perform fast installations on a server or locally. Installing each tool one by one can be a bit tedious and time-consuming, so I’ve gathered popular tools in one place. 
-Happy hacking!"
+Happy hacking!" :smiley:
 
 
 - Amass
@@ -56,5 +56,6 @@ Happy hacking!"
 - wpscan
 - wpcli
 
+reference link :point_down:
 
 https://github.com/nahamsec/bbht
