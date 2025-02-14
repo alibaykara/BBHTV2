@@ -3,7 +3,8 @@
   <img src="https://github.com/user-attachments/assets/128590f4-eaa4-4fc7-984e-23b62a5e9a5c" width= "300px" alt="BBHTV2"/>
 </p>
 
-Bug Bounty Hunting Tools is a script to install the most popular tools used while looking for vulnerabilities for a bug bounty program.
+"Hello, there used to be a Bash script developed by NahamSec for bug bounty hunters. This script was released 6 years ago but unfortunately hasn't been updated. I created a similar setup script, here’s the new BBHTV2. My goal is to quickly set up tools; to perform fast installations on a server or locally. Installing each tool one by one can be a bit tedious and time-consuming, so I’ve gathered popular tools in one place. 
+Happy hacking!"
 
 
 - Amass
