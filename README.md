@@ -9,27 +9,39 @@ Happy hacking!" :smiley:
 
 - Amass
 - Aquatone
+- Arjun
 - Asnlookup
 - Assetfinder
+- Autorecon
+- Awscli
 - Bakejs
 - BBQSQL
 - BBOT
 - BucketFinder
 - BucketLoot
 - Censys
+- cloudFlair
+- cloudlist
 - dirbuster
 - dirsearch
+- dnsgen
 - dnsrecon
 - dnsx
 - EyeWitness
 - ffuf
 - Findomain
+- feroxbuster
 - gau
+- github-dorks
+- github-search
+- gitrob
+- gitleaks
 - gobuster
 - gowitness
 - Havij
 - httpx
 - Httprobe
+- interactsh
 - JSParser
 - js-beautify
 - jsmapfinder
@@ -38,6 +50,11 @@ Happy hacking!" :smiley:
 - lazys3
 - LinkFinder
 - massdns
+- naabu
+- nuclei
+- nmap
+- paramspider
+- rustscan
 - s3scanner
 - Seclists collection
 - shuffledns
@@ -47,14 +64,19 @@ Happy hacking!" :smiley:
 - subjack
 - target.py
 - teh_s3_bucketeers
+- truffleHog
 - Unfurl
 - urlfinder
+- urlhunter
 - virtual-host-discovery
 - Waybackurls
+- waybackmachine
 - webscreenshot
+- Whois
 - WPScanAPI
 - wpscan
 - wpcli
+
 
 reference link :point_down:
 
