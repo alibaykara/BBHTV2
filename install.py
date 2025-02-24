@@ -32,8 +32,8 @@ def setup_main_directory():
 
 def install_golang():
     print("[+] Installing Golang...")
-    run_command("wget https://dl.google.com/go/go1.23.5.linux-amd64.tar.gz")
-    run_command("tar -xvf go1.23.5.linux-amd64.tar.gz")
+    run_command("wget https://dl.google.com/go/go1.24.0.linux-amd64.tar.gz")
+    run_command("tar -xvf go1.24.0.linux-amd64.tar.gz")
     run_command("mv go /usr/local")
     
     # Set up Go environment variables
@@ -58,7 +58,7 @@ def install_golang():
     os.environ["PATH"] = f"{os.environ['PATH']}:/usr/local/go/bin:{go_path}/bin"
     
     # Cleanup
-    run_command("rm go1.23.5.linux-amd64.tar.gz")
+    run_command("rm go1.24.0.linux-amd64.tar.gz")
 
 def install_tools(main_dir):
     print("[+] Installing security tools...")
@@ -66,43 +66,43 @@ def install_tools(main_dir):
     tools = {
         "Amass": {
             "dir": "amass",
-            "cmd": "go install -v github.com/OWASP/Amass/v3/...@master"
+            "cmd": "go install -v github.com/owasp-amass/amass/v4/...@master"
         },
         "Aquatone": {
             "dir": "aquatone",
-            "cmd": "wget https://github.com/michenriksen/aquatone/releases/download/v1.7.0/aquatone_linux_amd64_1.7.0.zip && unzip aquatone_linux_amd64_1.7.0.zip && mv aquatone /usr/local/bin/ && rm -rf aquatone_linux_amd64_1.7.0.zip LICENSE.txt README.md"
+            "cmd": "go install github.com/michenriksen/aquatone/cmd@latest"
         },
         "Arjun": {
             "dir": "arjun",
-            "cmd": "pip3 install arjun"
+            "cmd": "sudo apt install arjun -y"
         },
         "Asnlookup": {
             "dir": "asnlookup",
-            "cmd": "pip3 install asnlookup"
+            "cmd": "git clone https://github.com/yassineaboukir/Asnlookup"
         },
         "Assetfinder": {
             "dir": "assetfinder",
-            "cmd": "go install -v github.com/tomnomnom/assetfinder@latest"
+            "cmd": "go install -v github.com/tomnomnom/assetfinder/cmd@latest"
         },
         "Autorecon": {
             "dir": "autorecon",
-            "cmd": "pip3 install git+https://github.com/Tib3rius/AutoRecon.git"
+            "cmd": "sudo apt install autorecon -y"
         },
         "Awscli": {
             "dir": "awscli",
-            "cmd": "pip3 install awscli"
+            "cmd": "apt install -y awscli"
         },
         "Bakejs": {
             "dir": "bakejs",
-            "cmd": "npm install -g bakejs"
+            "cmd": "git clone https://github.com/buildjs/bake-js.git"
         },
         "BBQSQL": {
             "dir": "bbqsql",
-            "cmd": "pip3 install bbqsql"
+            "cmd": "git clone https://github.com/CiscoCXSecurity/bbqsql.git"
         },
         "BBOT": {
             "dir": "bbot",
-            "cmd": "pip3 install bbot"
+            "cmd": "pipx install bbot"
         },
         "BucketFinder": {
             "dir": "bucketfinder",
@@ -110,19 +110,19 @@ def install_tools(main_dir):
         },
         "BucketLoot": {
             "dir": "bucketloot",
-            "cmd": "pip3 install bucketloot"
+            "cmd": "git clone https://github.com/redhuntlabs/BucketLoot.git && cd BucketLoot && go build"
         },
         "Censys": {
             "dir": "censys",
-            "cmd": "pip3 install censys"
+            "cmd": "git clone https://github.com/censys/censys-python.git"
         },
         "cloudFlair": {
             "dir": "cloudflair",
-            "cmd": "pip3 install cloudflair"
+            "cmd": "git clone https://github.com/christophetd/CloudFlair.git"
         },
         "cloudlist": {
             "dir": "cloudlist",
-            "cmd": "pip3 install cloudlist"
+            "cmd": "go install -v github.com/projectdiscovery/cloudlist/cmd/cloudlist@latest"
         },
         "dirbuster": {
             "dir": "dirbuster",
@@ -134,11 +134,11 @@ def install_tools(main_dir):
         },
         "dnsgen": {
             "dir": "dnsgen",
-            "cmd": "pip3 install dnsgen"
+            "cmd": "git clone https://github.com/AlephNullSK/dnsgen.git"
         },
         "dnsrecon": {
             "dir": "dnsrecon",
-            "cmd": "pip3 install dnsrecon"
+            "cmd": "apt install -y dnsrecon"
         },
         "dnsx": {
             "dir": "dnsx",
@@ -166,11 +166,11 @@ def install_tools(main_dir):
         },
         "github-dorks": {
             "dir": "github-dorks",
-            "cmd": "git clone https://github.com/techgaun/github-dorks.git ."
+            "cmd": "git clone https://github.com/techgaun/github-dorks.git"
         },
         "github-search": {
             "dir": "github-search",
-            "cmd": "pip3 install github-search"
+            "cmd": "git clone https://github.com/gwen001/github-search && cd github-search && python3 install -r requirements.txt"
         },
         "gitrob": {
             "dir": "gitrob",
@@ -202,7 +202,7 @@ def install_tools(main_dir):
         },
         "interactsh": {
             "dir": "interactsh",
-            "cmd": "go install github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest"
+            "cmd": "go install -v github.com/projectdiscovery/interactsh/cmd/interactsh-client@latest"
         },
         "JSParser": {
             "dir": "jsparser",
@@ -210,11 +210,11 @@ def install_tools(main_dir):
         },
         "js-beautify": {
             "dir": "js-beautify",
-            "cmd": "npm install -g js-beautify"
+            "cmd": "npm i js-beautify"
         },
         "jsmapfinder": {
             "dir": "jsmapfinder",
-            "cmd": "pip3 install jsmapfinder"
+            "cmd": "npm install -g jsmapfinder"
         },
         "katana": {
             "dir": "katana",
@@ -222,11 +222,11 @@ def install_tools(main_dir):
         },
         "knockpy": {
             "dir": "knockpy",
-            "cmd": "pip3 install knockpy"
+            "cmd": "git clone https://github.com/guelfoweb/knock.git"
         },
         "lazys3": {
             "dir": "lazys3",
-            "cmd": "pip3 install lazys3"
+            "cmd": "git clone https://github.com/nahamsec/lazys3.git"
         },
         "LinkFinder": {
             "dir": "linkfinder",
@@ -258,19 +258,19 @@ def install_tools(main_dir):
         },
         "rustscan": {
             "dir": "rustscan",
-            "cmd": "cargo install rustscan"
+            "cmd": "wget "https://github.com/RustScan/RustScan/releases/download/2.4.1/rustscan.deb.zip" && cd rustscan && dpkg -i rustscan.deb.zip"
         },
         "s3scanner": {
             "dir": "s3scanner",
-            "cmd": "pip3 install s3scanner"
+            "cmd": "apt install s3scanner -y"
         },
         "Seclists collection": {
             "dir": "seclists",
-            "cmd": "apt-get install -y seclists"
+            "cmd": "git clone https://github.com/danielmiessler/SecLists.git"
         },
         "shuffledns": {
             "dir": "shuffledns",
-            "cmd": "go install github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest"
+            "cmd": "go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest"
         },
         "sqlmap-dev": {
             "dir": "sqlmap-dev",
@@ -278,7 +278,7 @@ def install_tools(main_dir):
         },
         "subdomain.py": {
             "dir": "subdomain.py",
-            "cmd": "git clone https://github.com/aboul3la/Sublist3r.git . && pip3 install -r requirements.txt"
+            "cmd": "git clone https://github.com/alibaykara/subdomain.py.git"
         },
         "subfinder": {
             "dir": "subfinder",
@@ -286,11 +286,11 @@ def install_tools(main_dir):
         },
         "subjack": {
             "dir": "subjack",
-            "cmd": "go install github.com/haccer/subjack@latest"
-        },
+            "cmd": "go install -v github.com/haccer/subjack/cmd@latest"
+               },
         "target.py": {
             "dir": "target.py",
-            "cmd": "git clone https://github.com/devanshbatham/ParamSpider.git ."
+            "cmd": "git clone https://github.com/alibaykara/target.py.git"
         },
         "teh_s3_bucketeers": {
             "dir": "teh_s3_bucketeers",
@@ -298,11 +298,11 @@ def install_tools(main_dir):
         },
         "truffleHog": {
             "dir": "trufflehog",
-            "cmd": "pip3 install truffleHog"
+            "cmd": "git clone https://github.com/trufflesecurity/trufflehog.git" && cd trufflehog && go install"
         },
         "Unfurl": {
             "dir": "unfurl",
-            "cmd": "go install github.com/tomnomnom/unfurl@latest"
+            "cmd": "go install -v github.com/tomnomnom/unfurl@latest"
         },
         "urlfinder": {
             "dir": "urlfinder",
@@ -310,7 +310,7 @@ def install_tools(main_dir):
         },
         "urlhunter": {
             "dir": "urlhunter",
-            "cmd": "go install github.com/utkusen/urlhunter@latest"
+            "cmd": "go install -v github.com/utkusen/urlhunter@latest"
         },
         "virtual-host-discovery": {
             "dir": "virtual-host-discovery",
