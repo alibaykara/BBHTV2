@@ -32,8 +32,8 @@ def setup_main_directory():
 
 def install_golang():
     print("[+] Installing Golang...")
-    run_command("wget https://dl.google.com/go/go1.24.0.linux-amd64.tar.gz")
-    run_command("tar -xvf go1.24.0.linux-amd64.tar.gz")
+    run_command("wget https://dl.google.com/go/go1.24.1.linux-amd64.tar.gz")
+    run_command("tar -xvf go1.24.1.linux-amd64.tar.gz")
     run_command("mv go /usr/local")
     
     # Set up Go environment variables
@@ -58,7 +58,7 @@ def install_golang():
     os.environ["PATH"] = f"{os.environ['PATH']}:/usr/local/go/bin:{go_path}/bin"
     
     # Cleanup
-    run_command("rm go1.24.0.linux-amd64.tar.gz")
+    run_command("rm go1.24.1.linux-amd64.tar.gz")
 
 def install_tools(main_dir):
     print("[+] Installing security tools...")
