@@ -110,7 +110,7 @@ def install_tools(main_dir):
         },
         "BucketLoot": {
             "dir": "bucketloot",
-            "cmd": "git clone https://github.com/redhuntlabs/BucketLoot.git && cd BucketLoot && go build"
+            "cmd": "git clone https://github.com/redhuntlabs/BucketLoot.git"
         },
         "Censys": {
             "dir": "censys",
@@ -130,7 +130,7 @@ def install_tools(main_dir):
         },
         "dirsearch": {
             "dir": "dirsearch",
-            "cmd": "git clone https://github.com/maurosoria/dirsearch.git ."
+            "cmd": "git clone https://github.com/maurosoria/dirsearch.git"
         },
         "dnsgen": {
             "dir": "dnsgen",
@@ -170,7 +170,7 @@ def install_tools(main_dir):
         },
         "github-search": {
             "dir": "github-search",
-            "cmd": "git clone https://github.com/gwen001/github-search && cd github-search && python3 install -r requirements.txt"
+            "cmd": "git clone https://github.com/gwen001/github-search"
         },
         "gitrob": {
             "dir": "gitrob",
@@ -206,7 +206,7 @@ def install_tools(main_dir):
         },
         "JSParser": {
             "dir": "jsparser",
-            "cmd": "git clone https://github.com/nahamsec/JSParser.git . && python3 setup.py install"
+            "cmd": "git clone https://github.com/nahamsec/JSParser.git"
         },
         "js-beautify": {
             "dir": "js-beautify",
@@ -230,11 +230,11 @@ def install_tools(main_dir):
         },
         "LinkFinder": {
             "dir": "linkfinder",
-            "cmd": "git clone https://github.com/GerbenJavado/LinkFinder.git . && python3 setup.py install"
+            "cmd": "git clone https://github.com/GerbenJavado/LinkFinder.git"
         },
         "massdns": {
             "dir": "massdns",
-            "cmd": "git clone https://github.com/blechschmidt/massdns.git . && make"
+            "cmd": "git clone https://github.com/blechschmidt/massdns.git"
         },
         "naabu": {
             "dir": "naabu",
@@ -250,15 +250,15 @@ def install_tools(main_dir):
         },
         "osmedeus": {
             "dir": "osmedeus",
-            "cmd": "git clone https://github.com/j3ssie/Osmedeus.git . && ./install.sh"
+            "cmd": "git clone https://github.com/j3ssie/Osmedeus.git"
         },
         "paramspider": {
             "dir": "paramspider",
-            "cmd": "git clone https://github.com/devanshbatham/ParamSpider.git ."
+            "cmd": "git clone https://github.com/devanshbatham/ParamSpider.git"
         },
         "rustscan": {
             "dir": "rustscan",
-            "cmd": "wget "https://github.com/RustScan/RustScan/releases/download/2.4.1/rustscan.deb.zip" && cd rustscan && dpkg -i rustscan.deb.zip"
+            "cmd": "wget "https://github.com/RustScan/RustScan/releases/download/2.4.1/rustscan.deb.zip"
         },
         "s3scanner": {
             "dir": "s3scanner",
@@ -294,11 +294,11 @@ def install_tools(main_dir):
         },
         "teh_s3_bucketeers": {
             "dir": "teh_s3_bucketeers",
-            "cmd": "git clone https://github.com/tomdev/teh_s3_bucketeers.git ."
+            "cmd": "git clone https://github.com/tomdev/teh_s3_bucketeers.git"
         },
         "truffleHog": {
             "dir": "trufflehog",
-            "cmd": "git clone https://github.com/trufflesecurity/trufflehog.git" && cd trufflehog && go install"
+            "cmd": "git clone https://github.com/trufflesecurity/trufflehog.git"
         },
         "Unfurl": {
             "dir": "unfurl",
